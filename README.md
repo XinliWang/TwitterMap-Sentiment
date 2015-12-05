@@ -12,8 +12,10 @@ For this project I develop an application that:
 ●	Define a worker pool that will pick up messages from the queue to process. These workers should each run on a separate pool thread.    
 ●	Make a call to the sentiment API off your preference (e.g. Alchemy). This can return a positive or negative sentiment evaluation for the text of the submitted Tweet.             
 ●	As soon as the tweet is processed send a notification -using SNS- to an HTTP endpoint that will update the UI with the new information about the Tweet.             
-●	Using this information your application should display the Tweet clusters and the overall sentiment.        
-  
+●	Using this information your application should display the Tweet clusters and the overall sentiment.  
+
+![architecture](https://cloud.githubusercontent.com/assets/10342877/11604772/d893224a-9abe-11e5-94e5-83a6881cac21.png)  
+
 ###Function Description:         
 1.For this application, I need to use URL to call the TwitterFetchServlet to start to crawl the tweets.                      
 2.When crawl the tweets and insert them into Amazon RDS(SQL), we send this tweets into SQS.  Then we will use a thread pool to process data by calling Alchemy API to acquire sentiment and insert it into database.                      
@@ -36,6 +38,7 @@ public static void main(String args[]){
 
 ```
 
-
+![twitter map](https://cloud.githubusercontent.com/assets/10342877/11604753/832321a2-9abe-11e5-8583-0dfbe40e1c1c.png)
+![twitter sentiment and trend](https://cloud.githubusercontent.com/assets/10342877/11604758/91cd54de-9abe-11e5-83cb-a8e26e0feeb8.png)
 
 
