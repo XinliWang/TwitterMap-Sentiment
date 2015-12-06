@@ -122,7 +122,7 @@ var pieData = [
 
 			];
 
-/* var radarChartData = {
+var radarChartData = {
 		labels: ["Extremely Negative", "Negative", "Neutral", "Positive", "Extremely Positvie"],
 		datasets: [
 			{
@@ -136,7 +136,7 @@ var pieData = [
 				data: [ext_neg,neg,mid,pos,ext_pos]
 			}
 		]
-	}; */
+	}; 
 
 var lineChartData = {
 		labels : [""],
@@ -154,7 +154,7 @@ var lineChartData = {
 		]
 	}
 
-	function polling1() {
+	/*function polling1() {
 		timer = setInterval(function() {
 			<% 
 			try{
@@ -223,7 +223,7 @@ var lineChartData = {
 		//initializeMap();
 		}, 30000);
 		
-	}
+	}*/
 	
 	
 function polling() {
@@ -261,12 +261,12 @@ function polling() {
             		myPie.segments[3].value = pos;
             		myPie.segments[4].value = ext_pos;
             		myPie.update();
-            		/* myRadar.datasets[0].points[0].value = ext_neg;
+            		myRadar.datasets[0].points[0].value = ext_neg;
             		myRadar.datasets[0].points[1].value = neg;
             		myRadar.datasets[0].points[2].value = mid;
             		myRadar.datasets[0].points[3].value = pos;
             		myRadar.datasets[0].points[4].value = ext_pos;
-            		myRadar.update(); */
+            		myRadar.update(); 
             		myLine.addData([total/count], "");
             		if (total>1000){
             			total = 0;
